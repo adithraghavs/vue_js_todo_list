@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <label for="task">Task</label>
+        <input type="text" id="task" v-model="enteredValue" />
+        <button v-on:click="addTask">Add Task</button>
+      </div>
+      <ul>
+        <li v-for="task in tasks">{{ task }}</li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
